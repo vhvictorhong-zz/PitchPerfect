@@ -104,14 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				2B38D0731BB066B0005FD08D /* AppDelegate.swift */,
-				2B38D0751BB066B0005FD08D /* RecordSoundsViewController.swift */,
-				2B38D0A11BB10249005FD08D /* PlaySoundsViewController.swift */,
-				2B38D0771BB066B0005FD08D /* Main.storyboard */,
-				2B38D0A51BB1050C005FD08D /* movie_quote.mp3 */,
-				2B38D07A1BB066B0005FD08D /* Assets.xcassets */,
-				2B38D07C1BB066B0005FD08D /* LaunchScreen.storyboard */,
+				2BED94571BC74308005CD498 /* Model */,
+				2BED94581BC74315005CD498 /* View */,
+				2BED94591BC74341005CD498 /* Controller */,
 				2B38D07F1BB066B0005FD08D /* Info.plist */,
-				2B38D0A71BB11544005FD08D /* RecordedAudio.swift */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -132,6 +128,34 @@
 				2B38D0951BB066B0005FD08D /* Info.plist */,
 			);
 			path = "Pitch PerfectUITests";
+			sourceTree = "<group>";
+		};
+		2BED94571BC74308005CD498 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B38D0A51BB1050C005FD08D /* movie_quote.mp3 */,
+				2B38D0A71BB11544005FD08D /* RecordedAudio.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BED94581BC74315005CD498 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B38D07A1BB066B0005FD08D /* Assets.xcassets */,
+				2B38D0771BB066B0005FD08D /* Main.storyboard */,
+				2B38D07C1BB066B0005FD08D /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2BED94591BC74341005CD498 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B38D0751BB066B0005FD08D /* RecordSoundsViewController.swift */,
+				2B38D0A11BB10249005FD08D /* PlaySoundsViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +517,7 @@
 				2B38D09A1BB066B0005FD08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B38D09B1BB066B0005FD08D /* Build configuration list for PBXNativeTarget "Pitch PerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +526,7 @@
 				2B38D09D1BB066B0005FD08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B38D09E1BB066B0005FD08D /* Build configuration list for PBXNativeTarget "Pitch PerfectUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +535,7 @@
 				2B38D0A01BB066B0005FD08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

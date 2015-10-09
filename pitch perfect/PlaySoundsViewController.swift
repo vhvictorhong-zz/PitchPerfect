@@ -59,13 +59,34 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playCustomSpeed(sender: UIButton) {
-        let speed = Float(speedInput.text!)!
-        playAudioSpeed(speed)
+        
+        let speed = Float(speedInput.text!)
+        
+        if speed == nil {
+            alertAction("You did not enter anything.")
+        }else if speed < 0.5 {
+            alertAction("The number is below 0.5.")
+        }else if speed > 2.0 {
+            alertAction("The number is above 2.0.")
+        }else {
+            playAudioSpeed(speed!)
+        }
+        
     }
     
     @IBAction func playCustomPitch(sender: UIButton) {
-        let pitch = Float(pitchInput.text!)!
-        playAudioWithVariablePitch(pitch)
+        let pitch = Float(pitchInput.text!)
+        
+        if pitch == nil {
+            alertAction("You did not enter anything.")
+        }else if pitch < -2400 {
+            alertAction("The number is below -2400.")
+        }else if pitch > 2400 {
+            alertAction("The number is above 2400.")
+        }else {
+            playAudioWithVariablePitch(pitch!)
+        }
+
     }
     
     func playAudioSpeed(speed: Float) {
@@ -95,6 +116,14 @@ class PlaySoundsViewController: UIViewController {
         
         audioPlayerNode.play()
     }
+    
+    func alertAction(titlemessage: String) {
+        let alert = UIAlertController(title: titlemessage, message: nil, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(okAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
