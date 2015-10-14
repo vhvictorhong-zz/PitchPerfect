@@ -11,7 +11,6 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
-    //add customize pitch/speed button
     var audioPlayer: AVAudioPlayer!
     var receivedAudio: RecordedAudio!
     var audioEngine: AVAudioEngine!
@@ -48,6 +47,8 @@ class PlaySoundsViewController: UIViewController {
    
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
     }
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
@@ -91,6 +92,8 @@ class PlaySoundsViewController: UIViewController {
     
     func playAudioSpeed(speed: Float) {
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.rate = speed
         audioPlayer.currentTime = 0.0
         audioPlayer.play()

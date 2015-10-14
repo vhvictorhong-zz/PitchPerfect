@@ -37,20 +37,29 @@
                                     <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdV-Bt-4RO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8v-52-QkL">
+                                <rect key="frame" x="247" y="358" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2470588235" green="1" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="K8v-52-QkL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2gd-hY-dM1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lnO-nc-JVW" secondAttribute="bottom" constant="43" id="CT3-sd-csB"/>
                             <constraint firstItem="UnS-nM-3aD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ch7-xV-XMs"/>
                             <constraint firstItem="UnS-nM-3aD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L7W-Py-LyU"/>
                             <constraint firstItem="fK6-Gi-4uE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MQA-h9-wI7"/>
                             <constraint firstItem="lnO-nc-JVW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N2z-FS-7w7"/>
                             <constraint firstItem="fK6-Gi-4uE" firstAttribute="top" secondItem="UnS-nM-3aD" secondAttribute="bottom" constant="44" id="Nth-Ab-Z4a"/>
+                            <constraint firstItem="K8v-52-QkL" firstAttribute="top" secondItem="UnS-nM-3aD" secondAttribute="bottom" constant="8" id="wMM-6A-rTp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="vrO-ct-IYb"/>
                     <connections>
                         <outlet property="recordButton" destination="UnS-nM-3aD" id="1ud-v5-hk3"/>
+                        <outlet property="recordLabel" destination="K8v-52-QkL" id="uns-pf-uxi"/>
                         <outlet property="recordingInProgress" destination="fK6-Gi-4uE" id="N1z-vN-gn7"/>
                         <outlet property="stopButton" destination="lnO-nc-JVW" id="vh1-6B-Dif"/>
                         <segue destination="T6q-WF-gSL" kind="show" identifier="stopRecording" id="AM9-rA-KG5"/>
@@ -77,13 +86,6 @@
                                 <state key="normal" image="slowbutton"/>
                                 <connections>
                                     <action selector="playSlowAudio:" destination="T6q-WF-gSL" eventType="touchUpInside" id="G2m-th-xmL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVn-sY-s1X">
-                                <rect key="frame" x="430" y="134" width="100" height="100"/>
-                                <state key="normal" image="fastbutton"/>
-                                <connections>
-                                    <action selector="playFastAudio:" destination="T6q-WF-gSL" eventType="touchUpInside" id="JbQ-fA-Qsi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNM-Xx-ZWV">
@@ -131,6 +133,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVn-sY-s1X">
+                                <rect key="frame" x="430" y="134" width="100" height="100"/>
+                                <state key="normal" image="fastbutton"/>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="T6q-WF-gSL" eventType="touchUpInside" id="JbQ-fA-Qsi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.74901962280273438" green="0.92941182851791382" blue="0.69803923368453979" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
